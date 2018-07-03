@@ -1,6 +1,11 @@
 
 //State argument is not application state, only the state this reducer is responsible for
 //Action is triggered and state is manipulated
-export default function(state, action) {
+export default function(state = null, action) {
+  switch(action.type) {
+   case 'BOOK_SELECTED':
+    return action.payload;
+  }
 
+  return state
 }
